@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<grammar version="1.0" xml:lang="en-US" mode="voice"
+         root="menu" tag-format="semantics/1.0"
+         xmlns="http://www.w3.org/2001/06/grammar">
+
+    <!-- main menu -->
+    <rule id="menu">
+        <one-of>
+            <item>
+                <ruleref uri="#start"/>
+            </item>
+            <item>
+                <ruleref uri="#exit"/>
+            </item>
+        </one-of>
+    </rule>
+
+    <!-- start mediaplayer rule -->
+    <rule id="start">
+        <tag>out.action = "start the mediaplayer";</tag>
+        <one-of>
+            <item>start</item>
+            <item>play</item>
+            <item>begin</item>
+            <item>continue</item>
+
+            <item>start the mediaplayer</item>
+            <item>play the mediaplayer</item>
+            <item>begin the mediaplayer</item>
+            <item>continue the mediaplayer</item>
+
+            <item>lets play</item>
+            <item>lets start</item>
+            <item>lets begin</item>
+            <item>lets continue</item>
+
+            <item>lets play the mediaplayer</item>
+            <item>lets start the mediaplayer</item>
+            <item>lets begin the mediaplayer</item>
+            <item>lets continue the mediaplayer</item>
+
+            <item>i want to play</item>
+            <item>i want to start</item>
+            <item>i want to begin</item>
+            <item>i want to continue</item>
+            <item>i would like to play</item>
+            <item>i would like start</item>
+            <item>i would like begin</item>
+            <item>i would like continue</item>
+
+            <item>i want to play the mediaplayer</item>
+            <item>i want to start the mediaplayer</item>
+            <item>i want to begin the mediaplayer</item>
+            <item>i want to continue the mediaplayer</item>
+            <item>i would like to play the mediaplayer</item>
+            <item>i would like start the mediaplayer</item>
+            <item>i would like begin the mediaplayer</item>
+            <item>i would like continue the mediaplayer</item>
+        </one-of>
+    </rule>
+
+    <!-- exit mediaplayer rule -->
+    <rule id="exit">
+        <tag>out.action = "exit the mediaplayer";</tag>
+        <one-of>
+            <item>exit</item>
+            <item>quit</item>
+            <item>close</item>
+            <item>exit the mediaplayer</item>
+            <item>quit the mediaplayer</item>
+            <item>close the mediaplayer</item>
+        </one-of>
+    </rule>
+</grammar>
