@@ -37,7 +37,7 @@ public class AudioManager : MonoBehaviour
             currentTrack = musicClips.Length -1;
         }
 
-        StartCoroutine(WaitForMusicEnd());
+        StartCoroutine("WaitForMusicEnd");
 
     }
     IEnumerator WaitForMusicEnd()
@@ -65,6 +65,33 @@ public class AudioManager : MonoBehaviour
 
 
         // Show title
-        StartCoroutine(WaitForMusicEnd());
+        StartCoroutine("WaitForMusicEnd");
+    }
+
+
+
+
+    public void PreviousTitle()
+    {
+        source.Stop();
+        currentTrack--;
+        if(currentTrack <0)
+        {
+            currentTrack = musicClips.Length -1;
+        }
+        source.clip= musicClips[currentTrack];
+        StartCoroutine("WaitForMusicEnd");
+    }
+
+    public void StopMusic()
+    {
+        StopCoroutine("WaitForMusicEnd");
+        source.Stop();
+    }
+
+    public void MuteMusic()
+    {
+        source.mute = !source.mute;
+
     }
 }
