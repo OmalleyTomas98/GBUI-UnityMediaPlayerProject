@@ -48,7 +48,3 @@ As part of the BSc Honours degree in Software Development @ Galway Mayo Institut
 
 ## The MediaPlayer   
 - Here are some examples of the user interface
-<<<<<<< HEAD
-=======
-
->>>>>>> 3ea9c0b487503e848253658f23e54779534e642d
