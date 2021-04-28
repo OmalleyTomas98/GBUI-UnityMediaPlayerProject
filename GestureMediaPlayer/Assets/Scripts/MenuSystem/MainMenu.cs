@@ -92,20 +92,14 @@ public class MainMenu : MonoBehaviour
         }
 
 
-        // Fade the music & scene out and load next scene.
         private static IEnumerator NextScene()
         {
-            //SceneChanger.FadeToScene();
             yield return new WaitForSeconds(1);
-            //SceneChanger.NextScene();
         }
 
-        // Fade the music & scene out and load park scene.
         private static IEnumerator PlayGame()
         {
-         //   SceneChanger.FadeToScene();
             yield return new WaitForSeconds(1);
-          //  SceneManager.LoadScene("videoPlayerScene");
         }
 
         // Stop the Grammar Recognizer if there is no input.
